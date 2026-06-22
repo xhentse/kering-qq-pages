@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>开云 · 信息索引 | 资料整理</title>
+    <style>
+        /* 重置 & 全局 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #faf9f7;
+            color: #2c2c2c;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, sans-serif;
+            line-height: 1.7;
+            font-weight: 400;
+            padding: 2rem 1rem 4rem;
+            min-height: 100vh;
+        }
+        /* 窄正文宽度，左右留白 */
+        .page {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        /* --- 顶部导航 --- */
+        .nav {
+            display: flex;
+            gap: 1.8rem;
+            align-items: center;
+            padding: 0.5rem 0 1.5rem;
+            border-bottom: 1px solid #e2ddd6;
+            margin-bottom: 2.8rem;
+            flex-wrap: wrap;
+        }
+        .nav a {
+            text-decoration: none;
+            color: #3d3d3d;
+            font-size: 0.95rem;
+            letter-spacing: 0.3px;
+            padding: 0.2rem 0;
+            transition: color 0.2s;
+        }
+        .nav a:hover {
+            color: #b15b2b;
+        }
+        .nav .brand {
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-right: auto;
+            color: #1e1e1e;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- 标题层级 --- */
+        h1 {
+            font-weight: 420;
+            font-size: 2rem;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.6rem;
+            line-height: 1.3;
+        }
+        h2 {
+            font-weight: 400;
+            font-size: 1.4rem;
+            margin: 2.6rem 0 1rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 1px solid #e8e3dc;
+            letter-spacing: 0.2px;
+        }
+        h3 {
+            font-weight: 420;
+            font-size: 1.1rem;
+            margin: 1.5rem 0 0.5rem;
+            color: #2e2e2e;
+        }
+        p {
+            margin: 0 0 0.9rem;
+            color: #3b3b3b;
+        }
+        .subhead {
+            font-size: 0.95rem;
+            color: #6b6258;
+            margin-bottom: 1.8rem;
+        }
+
+        /* 卡片场景模块 */
+        .scene-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+            margin: 2rem 0 2.4rem;
+        }
+        .scene-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 1.5rem 1.8rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02), 0 6px 16px rgba(0,0,0,0.02);
+            transition: box-shadow 0.2s;
+            border: 1px solid #efebe6;
+        }
+        .scene-card:hover {
+            box-shadow: 0 4px 14px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.02);
+        }
+        .scene-card .icon {
+            font-size: 1.5rem;
+            display: inline-block;
+            margin-bottom: 0.2rem;
+        }
+        .scene-card strong {
+            font-weight: 500;
+        }
+
+        /* 说明区块 / faq 摘要 */
+        .faq-item {
+            margin: 1.2rem 0;
+        }
+        .faq-item .q {
+            font-weight: 480;
+            margin-bottom: 0.2rem;
+            color: #1f1f1f;
+        }
+        .faq-item .a {
+            color: #4d4d4d;
+            padding-left: 0.2rem;
+        }
+
+        /* 内联链接 */
+        a {
+            color: #b15b2b;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            transition: color 0.15s;
+        }
+        a:hover {
+            color: #7f401f;
+        }
+
+        /* 小型分割及辅助 */
+        .meta-note {
+            margin-top: 2.6rem;
+            padding-top: 1.4rem;
+            border-top: 1px solid #e2ddd6;
+            font-size: 0.88rem;
+            color: #6f675d;
+        }
+
+        /* 响应式 */
+        @media (max-width: 500px) {
+            body {
+                padding: 1.2rem 1rem 3rem;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            .nav {
+                gap: 1rem;
+                margin-bottom: 2rem;
+            }
+            .scene-card {
+                padding: 1.2rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 顶部导航 -->
+    <nav class="nav">
+        <span class="brand">开云·索引</span>
+        <a href="#">整理笔记</a>
+        <a href="#">场景</a>
+        <a href="#">说明</a>
+    </nav>
+
+    <!-- 核心介绍 / hero -->
+    <h1>资料整理与信息索引</h1>
+    <p class="subhead">基于 <a href="https://kering-qq.com">开云</a> 平台的内容归档 · 轻量导航</p>
+    <p>
+        这里汇集了围绕「开云」的常见资料片段、功能场景与使用备忘。不追求大而全，而是以索引的方式提炼出几个值得留意的侧面，方便快速回顾或定位。内容均整理自公开信息与日常实践，保持简洁与清晰。
+    </p>
+
+    <!-- 三个场景模块 -->
+    <h2>常见场景模块</h2>
+    <div class="scene-grid">
+
+        <div class="scene-card">
+            <div class="icon">📂</div>
+            <h3>资料归档与检索</h3>
+            <p>
+                利用 <strong>开云</strong> 的结构化记录能力，对笔记、链接、文件做分类标记，并通过简单标签或日期进行回溯。适合需要快速调取历史信息的场合，减少重复查找时间。
+            </p>
+        </div>
+
+        <div class="scene-card">
+            <div class="icon">🔗</div>
+            <h3>链接与参考整理</h3>
+            <p>
+                将分散在浏览器、文档或聊天记录中的参考页面统一收录，附加简短备注。无论是项目调研、兴趣阅读还是学习记录，都能在 <a href="https://kering-qq.com">开云</a> 里形成可翻阅的线索链，避免链接丢失。
+            </p>
+        </div>
+
+        <div class="scene-card">
+            <div class="icon">📝</div>
+            <h3>轻量协作记录</h3>
+            <p>
+                多人共同维护一个信息面板，每个人补充自己看到的片段。通过更新时间和简短评论保持同步，适合小团队或家庭内部的信息共享，不依赖复杂工具。
+            </p>
+        </div>
+
+    </div>
+
+    <!-- 常见说明 / FAQ 摘要 -->
+    <h2>常见说明</h2>
+
+    <div class="faq-item">
+        <div class="q">Q：这些整理内容会同步到哪里？</div>
+        <div class="a">
+            所有条目在 <a href="https://kering-qq.com">开云</a> 内保存，支持导出为纯文本或网页快照。不依赖单一账号，可自行备份。
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="q">Q：场景模块的设计出发点是什么？</div>
+        <div class="a">
+            三个模块分别对应“保存”、“关联”与“协同”——这是日常信息处理中最常重复的环节。将功能还原为场景，便于理解每个操作的实际用途。
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="q">Q：索引页会不会定期更新？</div>
+        <div class="a">
+            本页基于当前阶段整理的内容生成，后续如果收录了新的常用方向，会补充对应的场景卡片。保持索引的实用与克制。
+        </div>
+    </div>
+
+    <!-- 一个自然嵌入链接的说明段 -->
+    <p style="margin-top: 2.2rem;">
+        如果你也在使用或了解 <a href="https://kering-qq.com">开云</a>，并且有自己的整理习惯，欢迎对比彼此的归档方式。不同人的索引结构往往能带来启发。
+    </p>
+
+    <!-- 底部小提示 -->
+    <div class="meta-note">
+        <span>整理时间：2025 · 当前版本为轻量索引</span>
+        <span style="display: block; margin-top: 0.3rem;">所有内容仅作参考，具体以实际页面为准。</span>
+    </div>
+
+</div>
+</body>
+</html>
